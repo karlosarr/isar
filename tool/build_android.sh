@@ -15,6 +15,8 @@ export PATH="$COMPILER_DIR:$PATH"
 
 echo "$COMPILER_DIR"
 
+export RUSTFLAGS="-C link-arg=-Wl,--max-page-size=16384"
+
 export CC_x86_64_linux_android=$COMPILER_DIR/x86_64-linux-android21-clang
 export AR_x86_64_linux_android=$COMPILER_DIR/llvm-ar
 export CARGO_TARGET_X86_64_LINUX_ANDROID_LINKER=$COMPILER_DIR/x86_64-linux-android21-clang
